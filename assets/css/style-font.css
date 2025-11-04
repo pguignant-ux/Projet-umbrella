@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Mont-Serra";
+    src: url("../font/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Mont-Serra-Bold";
+    src: url("../font/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Mont-Serra-Extrabold";
+    src: url("../font/Montserrat/static/Montserrat-ExtraBold.ttf");
+}
+
+body {
+    font-family: "Mont-Serra";
+}
+
+header:first-child a {
+    font-family: "Mont-Serra-Bold";
+}
+
+h1 {
+    font-family: "Mont-Serra-Extrabold";
+}
