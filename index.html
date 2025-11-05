@@ -1,15 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style-font.css">
+  <title>Accueil</title>
 </head>
+<body class="bg-[linear-gradient(90deg,#000000_8%,#000000_50%,#6619FF_78%,#000000_100%)] h-64 w-full Mont-Serra">
+  <!-- HEADER -->
 
+  <header class="p-4  text-white md:flex md:justify-between md:px-10">
+    <div class="flex items-center justify-between">
+      <a href="#" class="text-3xl font-extrabold italic [text-shadow:10px_10px_4px_#ffffff]">ElecEvent</a>
 
-<body>
+      <!--BTN-CHECKBOX-->
+      <label for="burger" class="md:hidden cursor-pointer">
+        <svg class="h-20 w-20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </label>
+    </div>
+
+    <!--PEER-->
+    <input id="burger" type="checkbox" class="peer hidden md:hidden" />
+
+    <!--PEER-CHECKED-->
+    <nav class="hidden peer-checked:block bg-black w-100 md:w-auto md:bg-transparent md:block">
+      <ul class="absolute z-10 md:static left-0 right-0 top-16 bg-black md:bg-transparent w-full md:w-auto md:h-auto flex flex-col md:flex-row md:gap-4 lg:gap-15 xl:gap-25 p-4 md:p-0 mt-10 md:mt-0">
+        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#">Accueil</a></li>
+        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#">Services</a></li>
+        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#">Portfolio</a></li>
+        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#">Témoignages</a></li>
+        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#">Contact & Devis</a></li>
+      </ul>
+    </nav>
+  </header>
+   <main>
+      <!-- HERO -->
+<section class="relative bg-[url('/assets/img/concerthero.jpg')] bg-cover bg-center bg-no-repeat w-full min-h-[60vh] md:min-h-[80vh] flex items-center justify-center">
+  <!--AFTER DARK-BG-->
+  <div class="absolute inset-0 bg-black/50"></div>
+  <h1 class="Mont-Serra-Extrabold relative text-2xl md:text-4xl lg:text-5xl font-extrabold 
+             bg-[linear-gradient(90deg,#ffffff_21%,#b200ff_88%)] bg-clip-text text-transparent">
+    Vibre au rythme de la nuit.
+  </h1>
+</section>
+
+<!-- PRESENTATION -->
+ <section class="flex flex-col p-15 gap-10 justify-center md:flex-row align-middle">
+    <div class="md:flex-1 md:flex md:align-middle md:items-center ">
+      <p class="text-white text-center Mont-Serra-Bold md:text-start md:text-sm md:flex-1">Nous sommes une agence événementielle dédiée à la culture électronique et à l’univers festif. Passionnés de 
+        musique, de lumière et d’expériences immersives, nous créons des événements qui font vibrer les corps et les 
+        esprits. De la conception à la réalisation, notre équipe met son én ergie au service de soirées uniques, où la 
+        scénographie, le son et les émotions ne font qu’un.</p>
+    </div>
+    <div class="flex justify-center md:flex-col md:flex-1">
+      <div class="-rotate-20">
+        <div class="md:flex justify-center">
+          <div class="w-40 h-40 md:p-2">
+            <img class="w-full h-full object-cover" src="assets/img/equipe.jpg" alt="">
+          </div>
+          <div class="hidden md:flex md:w-40 md:h-40 md:p-2">
+            <img class="- hidden md:flex w-full h-full object-cover" src="assets/img/equipe2.jpg" alt="">
+          </div>
+        </div>
+        <div class="hidden md:flex justify-center">
+          <div class="w-40 h-40 md:p-2">
+            <img class="w-full h-full object-cover" src="assets/img/equipe3.jpg" alt="">
+          </div>
+          <div class="w-40 h-40 md:p-2">
+            <img class="md:flex w-full h-full object-cover" src="assets/img/equipe4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+ </section>
+ <!-- CARROUSSEL ACCUEIL -->
+  <section class="p-15 flex flex-col items-center gap-5" >
+    <h2 class="text-white text-2xl md:text-3xl">Vibrez au rythme du son</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+          
+    <div class="flex items-center justify-center md:w-1/2 md:border-r-4 md:border-white">
+                <div class="snap-x overflow-x-auto flex flex-nowrap gap-1 mt-5 w-1/2">
+                    <div class="snap-start w-full shrink-0 scroll-ml-6">
+                        <img class="w-full h-full rounded-2xl" src="assets/img/carroussel1.jpg"/>
+                    </div>
+                    <div class="snap-start w-full shrink-0 scroll-ml-6">
+                        <img class="w-full h-full rounded-2xl " src="assets/img/carroussel2.jpg"/>
+                    </div>
+                    <div class="snap-start w-full shrink-0 scroll-ml-6 ">
+                        <img class="w-full h-full rounded-2xl" src="assets/img/carroussel3.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 md:max-w-2xl">
+              <p class="text-white text-center md:text-start">Plongez au cœur de l’énergie électro : une explosion de lumière, de 
+              rythme et de partage.
+              Nos festivals transforment chaque instant en une expérience sensorielle unique, où la musique unit le 
+              public dans une atmosphère électrisante.</p>
+            </div>
+    </div>
+
+  </section>
+  
     <!-- section "nos sercice" -->
     <section class="sm: my-0 mx-auto p-5 md:px-30">
         <div class=" flex flex-col p-5 rounded-4x">
@@ -127,6 +223,7 @@
                 </div>
 
     </section>
+</main>
 </body>
 
 </html>
