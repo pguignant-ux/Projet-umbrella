@@ -27,15 +27,16 @@
     <input id="burger" type="checkbox" class="peer hidden md:hidden" />
 
     <!--PEER-CHECKED-->
-    <nav class="hidden peer-checked:block bg-black w-100 md:w-auto md:bg-transparent md:block">
-      <ul class="absolute z-10 md:static left-0 right-0 top-16 bg-black md:bg-transparent w-full md:w-auto md:h-auto flex flex-col md:flex-row md:gap-4 lg:gap-15 xl:gap-25 p-4 md:p-0 mt-10 md:mt-0">
-        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#presentation">Accueil</a></li>
-        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#services">Services</a></li>
-        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#portfolio">Portfolio</a></li>
-        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#temoignage">Témoignages</a></li>
-        <li><a class="Mont-Serra-Bold block py-2 hover:underline hover:underline-offset-8" href="#contact">Contact & Devis</a></li>
-      </ul>
-    </nav>
+<nav class="hidden peer-checked:block bg-black w-full md:w-auto md:bg-transparent md:block">
+  <ul class="absolute z-10 md:static left-0 right-0 top-16 bg-black md:bg-transparent w-full md:w-auto md:h-auto flex flex-col md:flex-row md:gap-4 lg:gap-15 xl:gap-25 p-4 md:p-0 mt-10 md:mt-0">
+    <li><a class="Mont-Serra-Bold block py-2 transition-transform duration-300 ease-out md:hover:scale-110 hover:underline hover:underline-offset-8" href="#presentation">Accueil</a></li>
+    <li><a class="Mont-Serra-Bold block py-2 transition-transform duration-300 ease-out md:hover:scale-110 hover:underline hover:underline-offset-8" href="#services">Services</a></li>
+    <li><a class="Mont-Serra-Bold block py-2 transition-transform duration-300 ease-out md:hover:scale-110 hover:underline hover:underline-offset-8" href="#portfolio">Portfolio</a></li>
+    <li><a class="Mont-Serra-Bold block py-2 transition-transform duration-300 ease-out md:hover:scale-110 hover:underline hover:underline-offset-8" href="#temoignage">Témoignages</a></li>
+    <li><a class="Mont-Serra-Bold block py-2 transition-transform duration-300 ease-out md:hover:scale-110 hover:underline hover:underline-offset-8" href="#contact">Contact & Devis</a></li>
+  </ul>
+</nav>
+
   </header>
    <main>
       <!-- HERO -->
@@ -46,7 +47,7 @@
     alt="Concert Hero"
     class="absolute inset-0 h-full w-full object-cover md:hidden"
   />
-  
+
   <video
     class="absolute inset-0 hidden md:block h-full w-full object-cover pointer-events-none"
     src="/assets/vid/elecvid.mp4"
@@ -54,7 +55,6 @@
     muted
     loop
     playsinline
-    preload="auto"
     poster="/assets/img/concerthero.jpg"
     aria-hidden="true"
   ></video>
