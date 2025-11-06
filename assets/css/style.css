@@ -16,6 +16,7 @@
     --color-pink-300: oklch(82.3% 0.12 346.018);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-black: #000;
     --color-white: #fff;
@@ -23,6 +24,12 @@
     --container-2xl: 42rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --container-2xs: 18rem;
+    --container-2xl: 42rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
@@ -40,6 +47,8 @@
     --radius-2xl: 1rem;
     --radius-4xl: 2rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -247,6 +256,9 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
@@ -295,6 +307,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[386px\] {
+    max-width: 386px;
+  }
   .shrink-0 {
     flex-shrink: 0;
   }
@@ -307,6 +322,8 @@
   .touch-pan-left {
     --tw-pan-x: pan-left;
     touch-action: var(--tw-pan-x,) var(--tw-pan-y,) var(--tw-pinch-zoom,);
+  .touch-auto {
+    touch-action: auto;
   }
   .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -316,6 +333,9 @@
   }
   .scroll-ml-6 {
     scroll-margin-left: calc(var(--spacing) * 6);
+  }
+  .grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -347,9 +367,6 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .self-center {
-    align-self: center;
-  }
   .overflow-x-auto {
     overflow-x: auto;
   }
@@ -361,6 +378,14 @@
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
@@ -424,6 +449,15 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -435,6 +469,9 @@
   }
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);
+  }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
@@ -456,6 +493,9 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -524,6 +564,10 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-purple-300);
+  .hover\:text-pink-300 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-pink-300);
       }
     }
   }
@@ -804,16 +848,6 @@
 @property --tw-pinch-zoom {
   syntax: "*";
   inherits: false;
-}
-@property --tw-scroll-snap-strictness {
-  syntax: "*";
-  inherits: false;
-  initial-value: proximity;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-font-weight {
   syntax: "*";
